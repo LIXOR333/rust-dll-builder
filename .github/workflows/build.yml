@@ -23,8 +23,6 @@ jobs:
 
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.1
-      
-    # Удалено действие microsoft/setup-windowssdkbuildtools@v1, которое вызывало ошибку
         
     - name: Setup Visual Studio
       uses: microsoft/setup-msbuild@v1.1
@@ -66,7 +64,7 @@ jobs:
         }
 
     - name: Upload DLL artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: rust-dll-${{ matrix.platform }}-${{ matrix.configuration }}
         path: x64/${{ matrix.configuration }}/bebrinity.dll
