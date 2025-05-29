@@ -23,11 +23,7 @@ jobs:
 
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.1
-        
-    - name: Setup Visual Studio
-      uses: microsoft/setup-msbuild@v1.1
-      with:
-        vs-version: '[16.0,17.0)'  # Visual Studio 2019 (v142 toolset)
+      # Убрано ограничение по версии Visual Studio
         
     - name: Cache NuGet packages
       uses: actions/cache@v3
