@@ -24,10 +24,7 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.1
       
-    - name: Setup Windows SDK
-      uses: microsoft/setup-windowssdkbuildtools@v1
-      with:
-        buildtools-version: '10.0.22621.0'
+    # Удалено действие microsoft/setup-windowssdkbuildtools@v1, которое вызывало ошибку
         
     - name: Setup Visual Studio
       uses: microsoft/setup-msbuild@v1.1
